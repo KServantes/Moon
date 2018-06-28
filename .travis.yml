@@ -37,3 +37,11 @@ script:
 - cd ..
 
 - bash -c "exit $(cat ./redtext.txt | wc -l)"
+
+- git add ./redtext.txt
+- git commit -m "test redtext of $TRAVIS_COMMIT"
+- git push -f https://$NANAHIRA@github.com/purerosefallen/ygopro-222DIY-data HEAD:redtext
+
+branches:
+  only:
+  - retxbr
